@@ -1,6 +1,7 @@
 <?php
     $staff_id = htmlspecialchars($_GET["staff_id"]);
-    $link = mysqli_connect("localhost","hair_salon","pass","hair_salon");
+    require_once('./dbConfig.php');
+    $link = mysqli_connect(DB_SERVER,DB_USER,DB_PASS,DB_NAME);
     if($link == null){
         die (" 接続に失敗しました：".mysqli_connect_error());
     }
