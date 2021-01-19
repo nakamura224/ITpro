@@ -4,15 +4,11 @@ session_start();
 $dname = htmlspecialchars($_POST["dname"]);
 $dtelno = htmlspecialchars($_POST["dtelno"]);
 $dmail = htmlspecialchars($_POST["dmail"]);
-//$reserveNumber = htmlspecialchars($_POST["reserveNumber"]);
-//$checkin = htmlspecialchars($_POST["checkin"]);
 $message = htmlspecialchars($_POST["message"]);
 //入力値をセッションに格納する
 $_SESSION['reserve']['dname'] = $dname;
 $_SESSION['reserve']['dtelno'] = $dtelno;
 $_SESSION['reserve']['dmail'] = $dmail;
-//$_SESSION['reserve']['reserveNumber'] = $reserveNumber;
-//$_SESSION['reserve']['checkin'] = $checkin;
 $_SESSION['reserve']['message'] = $message;
 
 //エラーメッセージを格納する

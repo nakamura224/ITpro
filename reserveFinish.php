@@ -21,7 +21,7 @@ unset($_SESSION['reserveNo']);
       <p>予約ページ</p>
     </div>
     <div class ="logo">
-    <h1><a href="./index.php"><img src="./images/logo.png" alt=""></a></h1>
+    <h1><a href="./index.html"><img src="./images/logo.png" alt=""></a></h1>
     </div>
     </header>
 <!-- ヘッダー：終了 -->
@@ -38,7 +38,7 @@ unset($_SESSION['reserveNo']);
             <tr><th>予約番号</th><td><?php echo $reserveNo; ?></td></tr>
           </table>
           <br>
-          <p>当日はお気をつけてお出かけください。心よりお待ちいたしております。</p>
+          <p>当日はお気をつけてご来店ください。心よりお待ちいたしております。</p>
           <a class="submit_a" href="./index.html">トップページへ</a>
         </section>
       </article>

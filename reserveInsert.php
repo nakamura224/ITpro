@@ -1,6 +1,5 @@
 <?php
   session_start();
-  //require_once('./dbConfig.php');
   $link = mysqli_connect("localhost","hair_salon","pass","hair_salon");
   if ($link == null) {
      die("接続に失敗しました：" . mysqli_connect_error());
@@ -32,8 +31,7 @@
   $maxno = $row['maxno'];
 
 $reserve = date('Ymd', strtotime($reserveDay));
-//$reserveN = $reserve . "01";
-//$reserveNo = $maxno + 1;
+
 
   if (empty($maxno)) {	// その日初めての予約No
      $reserve = date('Ymd', strtotime($reserveDay));

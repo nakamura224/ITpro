@@ -39,7 +39,7 @@
       <p>予約確認画面</p>
     </div>
     <div class ="logo">
-    <h1><a href="./index.php"><img src="./images/logo.png" alt=""></a></h1>
+    <h1><a href="./index.html"><img src="./images/logo.png" alt=""></a></h1>
     </div>
   </header>
   <!-- ヘッダー：終了 -->
