@@ -1,5 +1,7 @@
 @charset "UTF-8";
-
+#menu{
+    height: 100px;
+}
 #menu ul{
     padding: 0;
     text-align:left;
@@ -8,4 +10,19 @@
     float:left;
     width: 500px;
     margin: 20px;
+    background-color:bisque;
+    padding: 10px;
+}
+.menu{
+    float: left;
+}
+.time {
+    float: right;
+}
+
+.fee{
+    float: right;
+}
+.information{
+    clear: both;
 }

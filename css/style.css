@@ -87,6 +87,8 @@ a:hover{
     float:left;
     width: 129px;
     margin: 20px;
+    list-style: none;
+    
 }
 /**************サイド(コンテンツ内)**************/
 #side{

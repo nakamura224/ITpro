@@ -1,3 +1,17 @@
+<?php
+    session_start();
+    $link = mysqli_connect("localhost","hair_salon","pass","hair_salon");
+    if($link == null){
+        die (" 接続に失敗しました：".mysqli_connect_error());
+    }
+    mysqli_set_charset($link,"utf8");
+
+    $staffNa = $_GET['staffN'];
+    $_SESSION['reserve']['staff_name'] = $staffNa; 
+     //var_dump($staffNa);
+?>
+
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -28,14 +42,14 @@
          <section>
              <h2>予約日時</h2>
              <h3>予定日入力</h3>
-             <form method="post" action="#">
+             <form method="post" action="menu.php">
                  <table>
                  <tr>
                      <th>予定日</th>
-                     <td><input type ="date" name="#" value="<?php echo date('Y-m-d'); ?>" min ="<?php echo date('Y-m-d'); ?>" required></td>
+                     <td><input type ="date" name="reserveDay" value="<?php echo date('Y-m-d'); ?>" min ="<?php echo date('Y-m-d'); ?>" required></td>
                  </tr>
                  </table>
-                 <input class ="submit_a" type = "submit" value="予約日時検索">
+                 <input class ="submit_a" type = "submit" value="予約日時指定">
                  </form>
          </section>
         </article>

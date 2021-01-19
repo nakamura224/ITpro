@@ -1,9 +1,23 @@
+<?php
+    $staff_id = htmlspecialchars($_GET["staff_id"]);
+    $link = mysqli_connect("localhost","hair_salon","pass","hair_salon");
+    if($link == null){
+        die (" 接続に失敗しました：".mysqli_connect_error());
+    }
+    mysqli_set_charset($link,"utf8");
+
+    session_start();
+    if(isset($_SESSION['reserve'])){
+        unset($_SESSION['reserve']);
+    }
+//var_dump($staff_id);
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <link href= "css/style.css" rel="stylesheet" type="text/css">
-    <title>予約ページ</title>
+    <title>スタッフページ</title>
 </head>
 <body>
  <!---ヘッダー：開始--->
@@ -22,15 +36,21 @@
 <div id ="contents">
 <!---メニュー：開始--->
      <nav id ="menu">
-      
-       <ul>
-           <li>担当者
-           <a href = "./staff_table.php"><img class ="menu-icon" src ="images/tanntou.png"></a></li>
-           <li>クーポン
-           <a href = "./index.html"><img class ="menu-icon" src ="images/ticket.png"></a></li>
-           <li>履歴
-           <a href = "./index.html"><img class ="menu-icon" src ="images/rireki.png"></a></li>
-       </ul>
+<?php
+$sql = "SELECT name,staff_image,id FROM staff_table WHERE staff_table.id = {$staff_id}";
+   
+$result = mysqli_query($link,$sql);
+$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+
+//var_dump($result);
+
+?>
+       
+           <h2><?php echo $row['name']; ?></h2>
+           <img class ="" src ="images/<?php echo $row['staff_image']; ?>">
+           <?php echo "<a href='./reserveDay.php?staffN={$row['name']}'>この担当者を指名</a>"; ?>
+            
+           
    </nav>
 <!---メニュー：終了--->
    
@@ -60,7 +80,10 @@
         <p>Copyright c 2020 Jikkyo All Rights Reserved.</p>
    </footer>
 <!---フッター：終了--->
-   
+   <?php
+    mysqli_free_result($result);
+    mysqli_close($link);
+?>
     
 </body>
 </html>
