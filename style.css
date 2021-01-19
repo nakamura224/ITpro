@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+
+/**************共通**************/
+
+html{
+    overflow: scroll;
+}
+body{
+    letter-spacing: 1px;
+    font-size: 12px;
+    color: #5A482B;
+}
+br{
+    letter-spacing: normal;
+    
+}
+a{
+    color: #5A482B;
+    text-decoration: none;
+}
+a:hover{
+    color: #e91e63;
+}
+
+
+/**************ヘッダー**************/
+
+#header{
+    position: relative;
+    width: 787px;
+    height: 200px;
+    margin: 0 auto;
+}
+.logo{
+    height: 100px;
+}
+#pr{
+    position: absolute;
+    width: 787px;
+    left: 0;
+    top: 0;
+}
+#header h1{
+    margin: 0;
+    padding-top: 25px;
+}
+
+#contact{
+    position: absolute;
+    bottom: 0;
+    right:0;
+}
+
+
+/**************アイキャッチ**************/
+#icatch{
+    width: 787px;
+    margin: 0 auto;
+}
+
+/**************コンテンツ**************/
+#contents{
+    width: 787px;
+    margin: 0 auto;
+    padding: 10px;
+}
+#pageTop{
+    clear: both;
+    padding: 20px 0;
+    text-align: right;
+}
+
+/**************メインサイド(コンテンツ内)**************/
+
+#menu{
+    float: right;
+    height:550px;
+    width: 550px;
+}
+
+#menu ul{
+    padding: 0;
+    text-align: center;
+}
+#menu li{
+    float:left;
+    width: 129px;
+    margin: 20px;
+    list-style: none;
+    
+}
+/**************サイド(コンテンツ内)**************/
+#side{
+    float: left;
+    width: 200px;
+}
+
+/**************フッター**************/
+#footer{
+    padding: 5px 0;
+    text-align: center;
+}

@@ -1,0 +1,28 @@
+@charset "UTF-8";
+#contents{
+    height: 1000px;
+}
+#menu ul{
+    padding: 0;
+    text-align:left;
+}
+#menu li{
+    float:left;
+    width: 500px;
+    margin: 5px;
+    background-color:bisque;
+    padding: 5px;
+}
+.menu{
+    float: left;
+}
+.time {
+    float: right;
+}
+
+.fee{
+    float: right;
+}
+.information{
+    clear: both;
+}
