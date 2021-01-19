@@ -32,16 +32,16 @@
   $maxno = $row['maxno'];
 
 $reserve = date('Ymd', strtotime($reserveDay));
-$reserveN = $reserve . "01";
-$reserveNo = $maxno + 1;
-/*
+//$reserveN = $reserve . "01";
+//$reserveNo = $maxno + 1;
+
   if (empty($maxno)) {	// その日初めての予約No
      $reserve = date('Ymd', strtotime($reserveDay));
      $reserveNo = $reserve . "01";
   } else {				// 他に予約がある場合
      $reserveNo = $maxno + 1;
   }
-  */
+  
 // Reserve表に挿入****************************************
   $message = $_SESSION['reserve']['message'];
   $menu = $_SESSION['reserve']['menu_name'];
